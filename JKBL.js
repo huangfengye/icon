@@ -1,0 +1,31 @@
+/******************************
+[rewrite_local]
+^https?:\/\/api\.mnks\.cn\/v1\/other url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/1TianCamVipCrack.js
+
+[mitm] 
+hostname = api.mnks.cn
+
+*******************************/
+
+var body = $response.body;
+var url  = $request.url;
+var objc = JSON.parse(body);
+
+const mumu ='/appevent.php';
+
+if (url. indexOf (mumu) != -1){
+	objc = {
+	  "result" : "success",
+	  "resume" : "ok,已计入缓存",
+	  "data" : {
+	  
+	  },
+	  "ecode" : "200",
+	  "datetime" : "2023-05-06 23:01:49",  
+	  "_local_" : "116"  
+};
+	body = JsON.stringify(objc);
+}
+$done({ 
+    body 
+});
