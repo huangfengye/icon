@@ -24,7 +24,7 @@ if (url. indexOf (mumu) != -1){
 	  "datetime" : "2099-05-16 23:01:49",  
 	  "_local_" : "116"  
 };
-	body = JsON.stringify(objc);
+	body = JSON.stringify(objc);
 }
 $done({ 
     body 
